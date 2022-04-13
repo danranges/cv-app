@@ -1,7 +1,15 @@
+import React, { useState } from "react";
 import "../index.css";
 import { FiMoon, FiSun } from "react-icons/fi";
 
-const Header = ({ toggleDark, isDark }) => {
+const Header = () => {
+  const [isDark, setIsDark] = useState(false);
+
+  const toggleDark = () => {
+    document.getElementById("root").classList.toggle("dark");
+    setIsDark(!isDark);
+  };
+
   return (
     <div className='flex flex-col items-center justify-between p-1  sm:flex-row'>
       <h1 className='mx-1 font-black text-2xl tracking-wide text-slate-900 dark:text-stone-100'>
