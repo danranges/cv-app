@@ -11,8 +11,8 @@ const Header = () => {
   };
 
   return (
-    <div className='flex flex-col items-center justify-between p-1  sm:flex-row'>
-      <h1 className='mx-1 font-black text-2xl tracking-wide text-slate-900 dark:text-stone-100'>
+    <div className='flex flex-col items-center justify-between p-2  sm:flex-row'>
+      <h1 className='mx-1 font-extrabold text-4xl tracking-widest text-slate-900 dark:text-stone-100'>
         CV Builder
       </h1>
       <div className='flex align-middle'>
@@ -22,7 +22,7 @@ const Header = () => {
           {!isDark ? <FiMoon /> : <FiSun />}
         </button>
         <button className='m-1 w-24 h-7 rounded bg-teal-300 dark:bg-teal-400'>Save</button>
-        <button className='m-1 w-24 h-7 rounded bg-stone-200 dark:bg-slate-700 dark:text-stone-100'>
+        <button className='m-1 w-24 h-7 rounded bg-slate-400 dark:bg-slate-700 dark:text-slate-100'>
           Export
         </button>
       </div>
