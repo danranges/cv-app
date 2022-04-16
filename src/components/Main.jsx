@@ -25,7 +25,7 @@ const Main = () => {
   const handleLocalStorage = () => {};
 
   return (
-    <div className='flex flex-col bg-slate-600 overflow-scroll items-center py-10'>
+    <div className='flex flex-col min-h-screen text-slate-900 dark:text-slate-50 overflow-scroll items-center'>
       <PersonalInputs handleChange={(e) => handlePersonalChange(e)} personalData={personalData} />
       <div>{JSON.stringify(personalData, "", 4)}</div>
     </div>

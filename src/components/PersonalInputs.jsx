@@ -2,7 +2,7 @@ import React from "react";
 
 const PersonalInputs = ({ handleChange, personalData }) => {
   return (
-    <div>
+    <div className='flex flex-col justify-center min-h-screen'>
       <h2>First, tell us a little about yourself</h2>
       <div className='flex flex-col gap-2 my-4'>
         <input
