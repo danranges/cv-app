@@ -5,7 +5,7 @@ import "./index.css";
 
 const App = () => {
   return (
-    <div className='App h-screen bg-slate-100 dark:bg-slate-900'>
+    <div className='App h-screen overflow-scroll bg-slate-100 dark:bg-slate-900'>
       <Header />
       <Main />
     </div>
