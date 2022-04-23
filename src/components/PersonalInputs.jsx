@@ -23,7 +23,7 @@ const PersonalInputs = ({ handleChange, personalData }) => {
           type='text'
           value={title}
           onChange={handleChange}
-          className='px-2 py-1 rounded text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate- placeholder:text-slate-500 dark:placeholder:text-slate-400'
+          className='px-2 py-1 rounded text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-50 placeholder:text-slate-500 dark:placeholder:text-slate-400'
         />
         <input
           name='email'
@@ -31,7 +31,7 @@ const PersonalInputs = ({ handleChange, personalData }) => {
           type='email'
           value={email}
           onChange={handleChange}
-          className='px-2 py-1 rounded text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate- placeholder:text-slate-500 dark:placeholder:text-slate-400'
+          className='px-2 py-1 rounded text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-50 placeholder:text-slate-500 dark:placeholder:text-slate-400'
         />
         <input
           name='phone'
@@ -39,7 +39,7 @@ const PersonalInputs = ({ handleChange, personalData }) => {
           type='tel'
           value={phone}
           onChange={handleChange}
-          className='px-2 py-1 rounded text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate- placeholder:text-slate-500 dark:placeholder:text-slate-400'
+          className='px-2 py-1 rounded text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-50 placeholder:text-slate-500 dark:placeholder:text-slate-400'
         />
         <input
           name='city'
@@ -47,7 +47,7 @@ const PersonalInputs = ({ handleChange, personalData }) => {
           type='text'
           value={city}
           onChange={handleChange}
-          className='px-2 py-1 rounded text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate- placeholder:text-slate-500 dark:placeholder:text-slate-400'
+          className='px-2 py-1 rounded text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-50 placeholder:text-slate-500 dark:placeholder:text-slate-400'
         />
       </div>
     </div>

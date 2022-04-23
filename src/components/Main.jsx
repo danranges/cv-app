@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import MultiSection from "./MultiSection";
 import PersonalInputs from "./PersonalInputs";
 
-const Main = () => {
-  const [personalData, setPersonalData] = useState({
+const Main = ({ handleChange }) => {
+  const [personal, setPersonal] = useState({
     name: "",
     title: "",
     email: "",
@@ -12,9 +12,11 @@ const Main = () => {
   });
   const [education, setEducation] = useState([]);
   const [experience, setExperience] = useState([]);
+  const [skills, setSkills] = useState("");
 
   const handlePersonalChange = (e) => {
-    setPersonalData((personalData) => ({ ...personalData, [e.target.name]: e.target.value }));
+    setPersonal((personal) => ({ ...personal, [e.target.name]: e.target.value }));
+    handleChange(personal, education, experience, skills);
   };
 
   const handleEducationChange = (obj) => {};
@@ -23,18 +25,11 @@ const Main = () => {
 
   const handleSkillsChange = (e) => {};
 
-  const handleSave = () => {};
-
-  const handleLocalStorage = () => {};
-
   return (
     <div className='flex flex-col box-border min-h-screen text-slate-900 dark:text-slate-50 items-center'>
-      <PersonalInputs handleChange={handlePersonalChange} personalData={personalData} />
+      <PersonalInputs handleChange={handlePersonalChange} personalData={personal} />
       <MultiSection handleChange={handleEducationChange} data={education} type='education' />
       <MultiSection handleChange={handleExperienceChange} data={experience} type='experience' />
-      <div className='min-w-full text-center dark:bg-slate-900 '>
-        {JSON.stringify(personalData, "", 4)}
-      </div>
     </div>
   );
 };
