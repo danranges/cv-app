@@ -1,7 +1,7 @@
 import React from "react";
 
-const PersonalInputs = ({ handleChange, personalData }) => {
-  const { name, title, email, phone, city } = personalData;
+const PersonalInputs = ({ handleChange, data }) => {
+  const { name, title, email, phone, city } = data;
 
   return (
     <div className='flex flex-col min-h-screen pt-20'>
