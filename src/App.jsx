@@ -15,9 +15,14 @@ const App = () => {
     });
   };
 
+  const handleSave = () => {
+    localStorage.setItem("cvData", JSON.stringify(resumeData));
+    console.log(localStorage.getItem("cvData"));
+  };
+
   return (
     <div className='App h-screen overflow-scroll bg-slate-100 dark:bg-slate-900'>
-      <Header />
+      <Header handleSave={handleSave} />
       <Main handleChange={handleChange} data={resumeData} />
       <div className='text-slate-900 dark:text-slate-50'>{JSON.stringify(resumeData, "", 2)}</div>
     </div>

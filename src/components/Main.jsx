@@ -4,9 +4,9 @@ import PersonalInputs from "./PersonalInputs";
 
 const Main = ({ handleChange, data }) => {
   const [personal, setPersonal] = useState(data.personal);
-  const [education, setEducation] = useState([]);
-  const [experience, setExperience] = useState([]);
-  const [skills, setSkills] = useState("");
+  const [education, setEducation] = useState(data.education);
+  const [experience, setExperience] = useState(data.experience);
+  const [skills, setSkills] = useState(data.skills);
 
   useEffect(() => handleChange(personal, education, experience, skills));
 
@@ -14,11 +14,17 @@ const Main = ({ handleChange, data }) => {
     setPersonal((personal) => ({ ...personal, [e.target.name]: e.target.value }));
   };
 
-  const handleEducationChange = (obj) => {};
+  const handleEducationChange = (obj) => {
+    setEducation();
+  };
 
-  const handleExperienceChange = (obj) => {};
+  const handleExperienceChange = (obj) => {
+    setExperience();
+  };
 
-  const handleSkillsChange = (e) => {};
+  const handleSkillsChange = (e) => {
+    setSkills();
+  };
 
   return (
     <div className='flex flex-col box-border min-h-screen text-slate-900 dark:text-slate-50 items-center'>
