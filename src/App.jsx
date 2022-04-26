@@ -2,9 +2,14 @@ import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import "./index.css";
+import { emptyCV, savedCV } from "./utils/utils";
 
 const App = () => {
-  const [resumeData, setResumeData] = useState(JSON.parse(localStorage.getItem("cvData")));
+  const [resumeData, setResumeData] = useState(emptyCV);
+
+  useEffect(() => {
+    console.log(!!savedCV);
+  }, []);
 
   const handleChange = (personal, education, experience, skills) => {
     setResumeData({
@@ -17,7 +22,6 @@ const App = () => {
 
   const handleSave = () => {
     localStorage.setItem("cvData", JSON.stringify(resumeData));
-    console.log(localStorage.getItem("cvData"));
   };
 
   return (
