@@ -34,8 +34,8 @@ const emptyCV = {
     city: "",
     title: "",
   },
-  education: [],
-  work: [],
+  education: [newSchool()],
+  experience: [newJob()],
   skills: "",
 };
 

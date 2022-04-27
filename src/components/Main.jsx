@@ -15,11 +15,15 @@ const Main = ({ handleChange, data }) => {
   };
 
   const handleEducationChange = (obj) => {
-    setEducation();
+    if (!education.find(({ id }) => id === obj.id)) {
+      setEducation(education.concat(obj));
+    }
   };
 
   const handleExperienceChange = (obj) => {
-    setExperience();
+    if (!experience.find(({ id }) => id === obj.id)) {
+      setExperience(experience.concat(obj));
+    }
   };
 
   const handleSkillsChange = (e) => {
