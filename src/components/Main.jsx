@@ -18,12 +18,14 @@ const Main = ({ handleChange, data }) => {
     if (!education.find(({ id }) => id === obj.id)) {
       setEducation(education.concat(obj));
     }
+    handleChange(personal, education, experience, skills);
   };
 
   const handleExperienceChange = (obj) => {
     if (!experience.find(({ id }) => id === obj.id)) {
       setExperience(experience.concat(obj));
     }
+    handleChange(personal, education, experience, skills);
   };
 
   const handleSkillsChange = (e) => {

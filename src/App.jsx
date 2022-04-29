@@ -5,7 +5,7 @@ import "./index.css";
 import { emptyCV, savedCV } from "./utils/utils";
 
 const App = () => {
-  const [resumeData, setResumeData] = useState(emptyCV);
+  const [resumeData, setResumeData] = useState(!!savedCV ? savedCV : emptyCV);
 
   useEffect(() => {}, []);
 
