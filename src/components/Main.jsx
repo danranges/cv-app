@@ -12,11 +12,18 @@ const Main = ({ handleChange, data }) => {
 
   const handlePersonalChange = (e) => {
     setPersonal((personal) => ({ ...personal, [e.target.name]: e.target.value }));
+    handleChange(personal, education, experience, skills);
   };
 
   const handleEducationChange = (obj) => {
     if (!education.find(({ id }) => id === obj.id)) {
       setEducation(education.concat(obj));
+    } else {
+      setEducation(
+        education.map((prev) => {
+          return prev.id === obj.id ? obj : prev;
+        }),
+      );
     }
     handleChange(personal, education, experience, skills);
   };
@@ -24,19 +31,46 @@ const Main = ({ handleChange, data }) => {
   const handleExperienceChange = (obj) => {
     if (!experience.find(({ id }) => id === obj.id)) {
       setExperience(experience.concat(obj));
+    } else {
+      setExperience(
+        experience.map((prev) => {
+          return prev.id === obj.id ? obj : prev;
+        }),
+      );
     }
     handleChange(personal, education, experience, skills);
   };
 
   const handleSkillsChange = (e) => {
-    setSkills();
+    setSkills(e.target.value);
+    handleChange(personal, education, experience, skills);
+  };
+
+  const handleDelete = (obj, section) => {
+    if (section === "education") {
+      setEducation(education.filter(({ id }) => id !== obj.id));
+    }
+    if (section === "experience") {
+      setExperience(experience.filter(({ id }) => id !== obj.id));
+    }
+    handleChange(personal, education, experience, skills);
   };
 
   return (
     <div className='flex flex-col box-border min-h-screen text-slate-900 dark:text-slate-50 items-center'>
       <PersonalInputs handleChange={handlePersonalChange} data={data.personal} />
-      <MultiSection handleChange={handleEducationChange} data={education} type='education' />
-      <MultiSection handleChange={handleExperienceChange} data={experience} type='experience' />
+      <MultiSection
+        handleChange={handleEducationChange}
+        handleDelete={handleDelete}
+        data={education}
+        type='education'
+      />
+      <MultiSection
+        handleChange={handleExperienceChange}
+        handleDelete={handleDelete}
+        data={experience}
+        type='experience'
+      />
     </div>
   );
 };

@@ -7,8 +7,6 @@ import { emptyCV, savedCV } from "./utils/utils";
 const App = () => {
   const [resumeData, setResumeData] = useState(!!savedCV ? savedCV : emptyCV);
 
-  useEffect(() => {}, []);
-
   const handleChange = (personal, education, experience, skills) => {
     setResumeData({
       personal: personal,
