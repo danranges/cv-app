@@ -8,21 +8,24 @@ const MultiSection = ({ handleChange, handleDelete, data, type }) => {
     handleChange(newSection);
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    !data.length && handleAdd();
+  });
 
   return (
     <div className='flex flex-col min-h-screen pt-20 border-2'>
-      <h1 className='my-8'>{}</h1>
-      {data.map((obj) => {
-        return (
-          <EduInput
-            pushChange={handleChange}
-            handleDelete={handleDelete}
-            key={obj.id}
-            school={obj}
-          />
-        );
-      })}
+      {type === "education"
+        ? data.map((obj) => {
+            return (
+              <EduInput
+                pushChange={handleChange}
+                handleDelete={handleDelete}
+                key={obj.id}
+                school={obj}
+              />
+            );
+          })
+        : null}
       <button onClick={handleAdd}>Add</button>
     </div>
   );

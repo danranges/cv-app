@@ -6,8 +6,8 @@ const newJob = () => {
     company: "",
     position: "",
     city: "",
-    start: Date(),
-    end: Date(),
+    start: new Date(),
+    end: "",
     desc: "",
   };
 };
@@ -19,8 +19,8 @@ const newSchool = () => {
     program: "",
     degree: "",
     city: "",
-    start: Date(),
-    end: Date(),
+    start: "",
+    end: "",
   };
 };
 
