@@ -19,7 +19,7 @@ const EduInput = ({ pushChange, handleDelete, school }) => {
       program: program,
       city: city,
       start: new Date(start),
-      end: end,
+      end: new Date(end),
     };
     pushChange(schoolData);
   }, [pushChange, school, schoolName, degree, program, city, start, end]);
@@ -39,21 +39,21 @@ const EduInput = ({ pushChange, handleDelete, school }) => {
           type='text'
           placeholder='Degree'
           value={degree}
-          onChange={(e) => setDegree(e.target.name)}
+          onChange={(e) => setDegree(e.target.value)}
           className='border-2 p-1 w-80 rounded-md mb-1'></input>
         <input
           name='program'
           type='text'
           placeholder='Program'
           value={program}
-          onChange={(e) => setProgram(e.target.name)}
+          onChange={(e) => setProgram(e.target.value)}
           className='border-2  p-1 w-80 rounded-md mb-1'></input>
         <input
           name='city'
           type='text'
           placeholder='City'
           value={city}
-          onChange={(e) => setCity(e.target.name)}
+          onChange={(e) => setCity(e.target.value)}
           className='border-2  p-1 w-80 rounded-md mb-1'></input>
         {true && (
           <div className='flex mb-2 justify-between'>

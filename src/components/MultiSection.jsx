@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { newJob, newSchool } from "../utils/utils";
 import EduInput from "./EduInput";
+import ExpInput from "./ExpInput";
 
 const MultiSection = ({ handleChange, handleDelete, data, type }) => {
   const handleAdd = () => {
@@ -25,7 +26,16 @@ const MultiSection = ({ handleChange, handleDelete, data, type }) => {
               />
             );
           })
-        : null}
+        : data.map((obj) => {
+            return (
+              <ExpInput
+                pushChange={handleChange}
+                handleDelete={handleDelete}
+                key={obj.id}
+                job={obj}
+              />
+            );
+          })}
       <button onClick={handleAdd}>Add</button>
     </div>
   );
