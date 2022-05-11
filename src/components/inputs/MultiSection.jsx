@@ -43,7 +43,11 @@ const MultiSection = ({ handleChange, handleDelete, data, type }) => {
               />
             );
           })}
-      <button onClick={handleAdd}>Add</button>
+      <button
+        onClick={handleAdd}
+        className='mt-6 mb-20 px-6 py-2 text-slate-900 text-lg md:text-xl lg:text-2xl rounded bg-slate-200 hover:bg-slate-400 active:bg-slate-300 shadow-sm'>
+        {type === "education" ? "Add School" : "Add Job"}
+      </button>
     </div>
   );
 };
