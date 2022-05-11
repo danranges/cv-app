@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Main from "./components/Main";
+import Output from "./components/Output";
 import "./index.css";
 import { emptyCV, savedCV } from "./utils/utils";
 
@@ -24,7 +25,7 @@ const App = () => {
     <div className='App h-screen overflow-scroll bg-slate-100 dark:bg-slate-900'>
       <Header handleSave={handleSave} />
       <Main handleChange={handleChange} data={resumeData} />
-      <div className='text-slate-900 dark:text-slate-50'>{JSON.stringify(resumeData, "", 2)}</div>
+      <Output data={resumeData} />
     </div>
   );
 };
