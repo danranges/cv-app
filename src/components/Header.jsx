@@ -11,7 +11,7 @@ const Header = ({ handleSave }) => {
   };
 
   return (
-    <div className='flex flex-col absolute top-0 z-50 min-w-full items-center justify-between p-2 bg-slate-100 dark:bg-slate-900 sm:flex-row'>
+    <div className='flex flex-col absolute top-0 z-50 min-w-full items-center justify-between p-2 bg-slate-50 dark:bg-slate-900 sm:flex-row'>
       <h1 className='mx-1 font-extrabold text-4xl tracking-widest text-slate-900 dark:text-stone-100'>
         CV Builder
       </h1>

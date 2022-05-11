@@ -4,11 +4,11 @@ const PersonalInputs = ({ handleChange, data }) => {
   const { name, title, email, phone, city } = data;
 
   return (
-    <div className='flex flex-col min-h-screen pt-20'>
+    <div className='flex flex-col pt-20 w-3/4 max-w-lg text-center'>
       <h2 className='my-8 text-2xl md:text-3xl lg:text-4xl'>
         First, tell us a little about yourself
       </h2>
-      <div className='flex flex-col gap-2 mt-4 md:text-lg lg:text-xl'>
+      <div className='flex flex-col gap-2 mt-4 p-2 bg-slate-100 dark:bg-slate-800 rounded-md shadow-md dark:shadow-none md:text-lg lg:text-xl'>
         <input
           name='name'
           placeholder='Name'

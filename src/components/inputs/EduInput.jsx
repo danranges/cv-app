@@ -25,54 +25,56 @@ const EduInput = ({ pushChange, handleDelete, school }) => {
   }, [pushChange, school, schoolName, degree, program, city, start, end]);
 
   return (
-    <div className='flex flex-col my-1 p-2 rounded-md shadow-sm self-center items-center'>
-      <div className='flex flex-col mx-0.5'>
+    <div className='flex flex-col w-3/4 max-w-lg my-1 p-2 bg-slate-100 dark:bg-slate-800 rounded-md shadow-md dark:shadow-none self-center items-center'>
+      <div className='flex flex-col w-full gap-2 mt-4 md:text-lg lg:text-xl'>
         <input
           name='school'
           type='text'
           placeholder='School'
           value={schoolName}
           onChange={(e) => setSchoolName(e.target.value)}
-          className='border-2 p-1 w-80 rounded-md mb-1'></input>
+          className='px-2 py-1 rounded text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-50 placeholder:text-slate-500 dark:placeholder:text-slate-400'
+        />
         <input
           name='degree'
           type='text'
           placeholder='Degree'
           value={degree}
           onChange={(e) => setDegree(e.target.value)}
-          className='border-2 p-1 w-80 rounded-md mb-1'></input>
+          className='px-2 py-1 rounded text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-50 placeholder:text-slate-500 dark:placeholder:text-slate-400'
+        />
         <input
           name='program'
           type='text'
           placeholder='Program'
           value={program}
           onChange={(e) => setProgram(e.target.value)}
-          className='border-2  p-1 w-80 rounded-md mb-1'></input>
+          className='px-2 py-1 rounded text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-50 placeholder:text-slate-500 dark:placeholder:text-slate-400'
+        />
         <input
           name='city'
           type='text'
           placeholder='City'
           value={city}
           onChange={(e) => setCity(e.target.value)}
-          className='border-2  p-1 w-80 rounded-md mb-1'></input>
-        {true && (
-          <div className='flex mb-2 justify-between'>
-            <input
-              name='start'
-              type='date'
-              className='border-2 rounded-md w-40 p-1'
-              value={format(new Date(start), "yyyy-MM-dd")}
-              onChange={(e) => setStart(e.target.value)}
-            />
-            <input
-              name='start'
-              type='date'
-              className='border-2 rounded-md w-40 p-1'
-              value={format(new Date(end), "yyyy-MM-dd")}
-              onChange={(e) => setEnd(e.target.value)}
-            />
-          </div>
-        )}
+          className='px-2 py-1 rounded text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-50 placeholder:text-slate-500 dark:placeholder:text-slate-400'
+        />
+        <div className='flex mb-2 gap-2 justify-center'>
+          <input
+            name='start'
+            type='date'
+            className='px-2 py-1 rounded text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-50 placeholder:text-slate-500 dark:placeholder:text-slate-400'
+            value={format(new Date(start), "yyyy-MM-dd")}
+            onChange={(e) => setStart(e.target.value)}
+          />
+          <input
+            name='start'
+            type='date'
+            className='px-2 py-1 rounded text-slate-900 shadow-sm dark:bg-slate-700 dark:text-slate-50 placeholder:text-slate-500 dark:placeholder:text-slate-400'
+            value={format(new Date(end), "yyyy-MM-dd")}
+            onChange={(e) => setEnd(e.target.value)}
+          />
+        </div>
       </div>
       <button onClick={() => handleDelete(school, "education")}>
         <FontAwesomeIcon icon={faTrashCan} className='' />

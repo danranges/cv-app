@@ -14,7 +14,14 @@ const MultiSection = ({ handleChange, handleDelete, data, type }) => {
   });
 
   return (
-    <div className='flex flex-col min-h-screen pt-20 border-2'>
+    <div className='flex flex-col items-center pt-20 px-2 w-full text-center'>
+      {type === "education" ? (
+        <h1 className='my-8 text-2xl md:text-3xl lg:text-4xl'>
+          Next up, where did you go to school?
+        </h1>
+      ) : (
+        <h1 className='my-8 text-2xl md:text-3xl lg:text-4xl'>Where have you worked?</h1>
+      )}
       {type === "education"
         ? data.map((obj) => {
             return (

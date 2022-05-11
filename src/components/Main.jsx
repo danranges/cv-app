@@ -3,7 +3,7 @@ import MultiSection from "./inputs/MultiSection";
 import PersonalInputs from "./inputs/PersonalInputs";
 import Skills from "./inputs/Skills";
 
-const Main = ({ handleChange, data }) => {
+const Main = ({ handleChange, handleSave, data }) => {
   const [personal, setPersonal] = useState(data.personal);
   const [education, setEducation] = useState(data.education);
   const [experience, setExperience] = useState(data.experience);
@@ -73,6 +73,11 @@ const Main = ({ handleChange, data }) => {
         type='experience'
       />
       <Skills handleChange={handleSkillsChange} data={skills} />
+      <button
+        onClick={handleSave}
+        className='mb-20 px-6 py-2 text-slate-900 text-lg md:text-xl lg:text-2xl rounded bg-teal-300 dark:bg-teal-400'>
+        Save Changes
+      </button>
     </div>
   );
 };

@@ -22,9 +22,9 @@ const App = () => {
   };
 
   return (
-    <div className='App h-screen overflow-scroll bg-slate-100 dark:bg-slate-900'>
+    <div className='App content-center h-screen overflow-scroll bg-slate-50 dark:bg-slate-900'>
       <Header handleSave={handleSave} />
-      <Main handleChange={handleChange} data={resumeData} />
+      <Main handleChange={handleChange} data={resumeData} handleSave={handleSave} />
       <Output data={resumeData} />
     </div>
   );
