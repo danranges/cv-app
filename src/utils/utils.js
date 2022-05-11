@@ -15,7 +15,7 @@ const newJob = () => {
 const newSchool = () => {
   return {
     id: nanoid(),
-    school: "",
+    schoolName: "",
     program: "",
     degree: "",
     city: "",

@@ -14,7 +14,7 @@ const EduInput = ({ pushChange, handleDelete, school }) => {
   useEffect(() => {
     const schoolData = {
       id: school.id,
-      school: schoolName,
+      schoolName: schoolName,
       degree: degree,
       program: program,
       city: city,
