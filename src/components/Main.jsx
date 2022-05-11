@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MultiSection from "./MultiSection";
 import PersonalInputs from "./PersonalInputs";
+import Skills from "./Skills";
 
 const Main = ({ handleChange, data }) => {
   const [personal, setPersonal] = useState(data.personal);
@@ -71,6 +72,7 @@ const Main = ({ handleChange, data }) => {
         data={experience}
         type='experience'
       />
+      <Skills handleChange={handleSkillsChange} data={skills} />
     </div>
   );
 };
