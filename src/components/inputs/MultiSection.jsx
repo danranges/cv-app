@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { newJob, newSchool } from "../utils/utils";
+import { newJob, newSchool } from "../../utils/utils";
 import EduInput from "./EduInput";
 import ExpInput from "./ExpInput";
 

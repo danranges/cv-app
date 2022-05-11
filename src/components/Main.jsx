@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import MultiSection from "./MultiSection";
-import PersonalInputs from "./PersonalInputs";
-import Skills from "./Skills";
+import MultiSection from "./inputs/MultiSection";
+import PersonalInputs from "./inputs/PersonalInputs";
+import Skills from "./inputs/Skills";
 
 const Main = ({ handleChange, data }) => {
   const [personal, setPersonal] = useState(data.personal);
