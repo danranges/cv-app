@@ -21,9 +21,13 @@ const App = () => {
     localStorage.setItem("cvData", JSON.stringify(resumeData));
   };
 
+  const handleExport = () => {
+    alert("Export");
+  };
+
   return (
     <div className='App content-center h-screen overflow-scroll bg-slate-50 dark:bg-slate-900'>
-      <Header handleSave={handleSave} />
+      <Header handleSave={handleSave} handleExport={handleExport} />
       <Main handleChange={handleChange} data={resumeData} handleSave={handleSave} />
       <Output data={resumeData} />
     </div>

@@ -75,7 +75,7 @@ const Main = ({ handleChange, handleSave, data }) => {
       <Skills handleChange={handleSkillsChange} data={skills} />
       <button
         onClick={handleSave}
-        className='mb-20 px-6 py-2 text-slate-900 text-lg md:text-xl lg:text-2xl rounded bg-teal-300 dark:bg-teal-400'>
+        className='mb-20 px-6 py-2 text-slate-900 text-lg md:text-xl lg:text-2xl rounded bg-teal-300 hover:bg-teal-200 active:bg-teal-400 dark:bg-teal-400 dark:hover:bg-teal-300 dark:active:bg-teal-500'>
         Save Changes
       </button>
     </div>
