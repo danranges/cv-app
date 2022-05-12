@@ -4,11 +4,11 @@ import EduOutput from "./outputs/EduOutput";
 import ExpOutput from "./outputs/ExpOutput";
 import "../index.css";
 
-const Output = ({ data }) => {
+const Output = React.forwardRef(({ data }, ref) => {
   const { personal, education, experience, skills } = data;
 
   return (
-    <div className='flex min-w-full justify-center'>
+    <div ref={ref} className='flex min-w-full justify-center'>
       <div className='flex flex-col bg-white rounded-lg shadow-md m-2 p-2 w-[50rem] break-normal'>
         <PersonalOutput personal={personal} />
         <div className='mt-2 text-3xl font-extralight'>Education:</div>
@@ -21,11 +21,11 @@ const Output = ({ data }) => {
         })}
         <div className='mb-2'>
           <div className='mt-2 text-3xl font-extralight'>Skills:</div>
-          <div className='mt-2'>{skills}</div>
+          <div className='mt-2 text-sm'>{skills}</div>
         </div>
       </div>
     </div>
   );
-};
+});
 
 export default Output;

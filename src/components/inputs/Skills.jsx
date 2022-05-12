@@ -2,7 +2,7 @@ import React from "react";
 
 const Skills = ({ handleChange, data }) => {
   return (
-    <div className='flex flex-col w-3/4 max-w-lg py-20 text-center'>
+    <div className='flex flex-col w-3/4 max-w-lg pt-10 pb-20 text-center'>
       <h1 className='my-8 text-2xl md:text-3xl lg:text-4xl'>
         Finally, what additional skills would you like to highlight?
       </h1>
