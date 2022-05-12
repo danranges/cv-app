@@ -4,7 +4,7 @@ import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { format } from "date-fns";
 
 const EduInput = ({ pushChange, handleDelete, school }) => {
-  const [schoolName, setSchoolName] = useState(school.school);
+  const [schoolName, setSchoolName] = useState(school.schoolName);
   const [degree, setDegree] = useState(school.degree);
   const [program, setProgram] = useState(school.program);
   const [city, setCity] = useState(school.city);
